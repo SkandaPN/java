@@ -3,11 +3,11 @@ pipeline {
     environment {     
            registryCredentials = credentials('DBuild')
     }
-    agent any
+    agent { label 'docker-node' }
     stages{
         stage('git-checkout') {
             steps {
-                git branch: 'master', url:'https://github.com/SkandaPN/java.git'
+                git branch: 'main', url:'https://github.com/SkandaPN/java.git'
             }
         }
         stage('Build docker image'){
