@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy ') {
             steps {
-                sh 'docker run -itd --name cont-${BUILD_ID} -p 8000:8080 ${registryCredentials_USR}/buildfreestyle:${BUILD_ID}'
+                sh 'docker run -itd --name cont-${BUILD_ID} -p 9000:8080 ${registryCredentials_USR}/buildfreestyle:${BUILD_ID}'
             }
             
         }
