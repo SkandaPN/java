@@ -1,4 +1,3 @@
-#!groovy
 pipeline {
     environment {     
            registryCredentials = credentials('DBuild')
